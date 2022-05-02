@@ -7,7 +7,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 10 and 11.
  */
-let preferredWidth = 300
+let preferredWidth = 500
 let preferredHeight = 600
 /*:
  ## Required code
@@ -34,9 +34,59 @@ PlaygroundPage.current.liveView = canvas
  
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
  */
+// create a turtle
+var turtle = Tortoise(drawingUpon: canvas)
 
-// Replace this comment with your first comment – what is the goal of the code you're about to write?
-canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
+//turtle location
+turtle.currentPosition()
+
+//set scale
+let scale = 50
+
+///{
+/// Example
+////move to the middle
+//turtle.penUp()
+//turtle.forward(steps: 5 * scale)
+//turtle.left(by: 90)
+//turtle.forward(steps: 5 * scale)
+//turtle.right(by: 90)
+//turtle.drawSelf()
+//
+////draw arrow
+////draw line
+//turtle.penDown()
+//turtle.forward(steps: 50)
+//
+////draw turtle
+//turtle.drawSelf()
+//
+////draw upward line
+//turtle.left(by: 225)
+//turtle.forward(steps: 2 * scale)
+//turtle.drawSelf()
+///}
+
+///creating 200x250 arrow
+//setting up
+turtle.right(by: 90)
+turtle.penDown()
+//draw line
+turtle.forward(steps: 100)
+turtle.left(by: 90)
+turtle.forward(steps: 150)
+turtle.right(by: 90)
+turtle.forward(steps: 50)
+turtle.left(by: 135)
+turtle.forward(steps: 140)
+turtle.left(by: 90)
+turtle.forward(steps: 140)
+turtle.left(by: 135)
+turtle.forward(steps: 50)
+turtle.right(by: 90)
+turtle.forward(steps: 150)
+
+///arrow finished
 
 /*:
  ## Show the Assistant Editor
@@ -45,7 +95,7 @@ canvas.drawRectangle(at: Point(x: 50, y: 75), width: 100, height: 200)
  Remember to show the Assistant Editor (1), and then switch to Live View (2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  
