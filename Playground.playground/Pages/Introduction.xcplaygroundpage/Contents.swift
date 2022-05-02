@@ -41,7 +41,7 @@ var turtle = Tortoise(drawingUpon: canvas)
 turtle.currentPosition()
 
 //set scale
-let scale = 50
+let scale = 20
 
 ///{
 /// Example
@@ -70,23 +70,23 @@ let scale = 50
 ///creating 200x250 arrow
 //setting up
 turtle.left(by: 90)
-turtle.forward(steps: 200)
+turtle.forward(steps: 75)
 turtle.right(by: 180)
 turtle.penDown()
 //draw line
-turtle.forward(steps: 100)
-turtle.left(by: 90)
-turtle.forward(steps: 150)
-turtle.right(by: 90)
 turtle.forward(steps: 50)
-turtle.left(by: 135)
-turtle.forward(steps: 140)
 turtle.left(by: 90)
-turtle.forward(steps: 140)
-turtle.left(by: 135)
-turtle.forward(steps: 50)
+turtle.forward(steps: 75)
 turtle.right(by: 90)
-turtle.forward(steps: 150)
+turtle.forward(steps: 25)
+turtle.left(by: 135)
+turtle.forward(steps: 70)
+turtle.left(by: 90)
+turtle.forward(steps: 70)
+turtle.left(by: 135)
+turtle.forward(steps: 25)
+turtle.right(by: 90)
+turtle.forward(steps: 75)
 
 ///arrow finished
 
