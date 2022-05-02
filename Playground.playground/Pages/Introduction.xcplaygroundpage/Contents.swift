@@ -69,7 +69,9 @@ let scale = 50
 
 ///creating 200x250 arrow
 //setting up
-turtle.right(by: 90)
+turtle.left(by: 90)
+turtle.forward(steps: 200)
+turtle.right(by: 180)
 turtle.penDown()
 //draw line
 turtle.forward(steps: 100)
