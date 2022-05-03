@@ -35,10 +35,10 @@ PlaygroundPage.current.liveView = canvas
  [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
  */
 // create a turtle
-var turtle = Tortoise(drawingUpon: canvas)
+var t = Tortoise(drawingUpon: canvas)
 
 //turtle location
-turtle.currentPosition()
+t.currentPosition()
 
 //set scale
 let scale = 20
@@ -71,46 +71,46 @@ let scale = 20
 //setting up
 
 //arrow start POS up
-turtle.left(by: 90)
-turtle.forward(steps: 25)
-turtle.right(by: 90)
+t.left(by: 90)
+t.forward(steps: 25)
+t.right(by: 90)
 
 func arrow() {
-//draw line
-turtle.forward(steps: 75)
-turtle.right(by: 90)
-turtle.forward(steps: 25)
-turtle.left(by: 135)
-turtle.forward(steps: 70)
-turtle.left(by: 90)
-turtle.forward(steps: 70)
-turtle.left(by: 135)
-turtle.forward(steps: 25)
-turtle.right(by: 90)
-turtle.forward(steps: 75)
-turtle.left(by: 90)
-turtle.forward(steps: 50)
-turtle.left(by: 90)
+    //draw line
+    t.forward(steps: 75)
+    t.right(by: 90)
+    t.forward(steps: 25)
+    t.left(by: 135)
+    t.forward(steps: 70)
+    t.left(by: 90)
+    t.forward(steps: 70)
+    t.left(by: 135)
+    t.forward(steps: 25)
+    t.right(by: 90)
+    t.forward(steps: 75)
+    t.left(by: 90)
+    t.forward(steps: 50)
+    t.left(by: 90)
 }
 ///arrow finished
 
 
-turtle.penUp()
-turtle.backward(steps: 125)
-turtle.penDown()
+t.penUp()
+t.backward(steps: 125)
+t.penDown()
 //arrow loops
 for _ in 1...7 {
     for _ in 1...5 {
         arrow()
-        turtle.penUp()
-        turtle.forward(steps: 125)
-        turtle.penDown()
-        }
-    turtle.penUp()
-    turtle.backward(steps: 625)
-    turtle.left(by: 90)
-    turtle.forward(steps: 105)
-    turtle.right(by: 90)
+        t.penUp()
+        t.forward(steps: 125)
+        t.penDown()
+    }
+    t.penUp()
+    t.backward(steps: 625)
+    t.left(by: 90)
+    t.forward(steps: 105)
+    t.right(by: 90)
 }
 
 
