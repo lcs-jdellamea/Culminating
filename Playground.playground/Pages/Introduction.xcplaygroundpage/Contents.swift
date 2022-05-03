@@ -69,26 +69,50 @@ let scale = 20
 
 ///creating 200x250 arrow
 //setting up
+
+//arrow start POS up
 turtle.left(by: 90)
-turtle.forward(steps: 75)
-turtle.right(by: 180)
-turtle.penDown()
+turtle.forward(steps: 25)
+turtle.right(by: 90)
+
+func arrow() {
 //draw line
+turtle.forward(steps: 75)
+turtle.right(by: 90)
+turtle.forward(steps: 25)
+turtle.left(by: 135)
+turtle.forward(steps: 70)
+turtle.left(by: 90)
+turtle.forward(steps: 70)
+turtle.left(by: 135)
+turtle.forward(steps: 25)
+turtle.right(by: 90)
+turtle.forward(steps: 75)
+turtle.left(by: 90)
 turtle.forward(steps: 50)
 turtle.left(by: 90)
-turtle.forward(steps: 75)
-turtle.right(by: 90)
-turtle.forward(steps: 25)
-turtle.left(by: 135)
-turtle.forward(steps: 70)
-turtle.left(by: 90)
-turtle.forward(steps: 70)
-turtle.left(by: 135)
-turtle.forward(steps: 25)
-turtle.right(by: 90)
-turtle.forward(steps: 75)
-
+}
 ///arrow finished
+
+
+turtle.penUp()
+turtle.backward(steps: 125)
+turtle.penDown()
+//arrow loops
+for _ in 1...7 {
+    for _ in 1...5 {
+        arrow()
+        turtle.penUp()
+        turtle.forward(steps: 125)
+        turtle.penDown()
+        }
+    turtle.penUp()
+    turtle.backward(steps: 625)
+    turtle.left(by: 90)
+    turtle.forward(steps: 105)
+    turtle.right(by: 90)
+}
+
 
 /*:
  ## Show the Assistant Editor
