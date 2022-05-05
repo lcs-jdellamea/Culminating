@@ -58,20 +58,56 @@ canvas.drawAxes(withScale: true, by: 20, color: .black)
 
 // Begin writing your code below (you can remove the examples shown)
 
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
+// create a turtle
+var t = Tortoise(drawingUpon: canvas)
 
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
+//turtle location
+t.currentPosition()
 
-// Go back to origin
-p.goToOrigin()
+//set scale
+let scale = 20
 
-// Change the pen color
-p.penColor = .red
+///Tessellation Start
+//CurrentPOS commands at intersecting points
 
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+//First line through (x=0,y=0)
+t.currentPosition()
+t.penDown()
+t.forward(steps: 10)
+t.left(by: 60)
+t.forward(steps: 30)
+t.right(by: 120)
+t.forward(steps: 30)
+t.left(by: 100)
+t.forward(steps: 13)
+t.left(by: 80)
+t.forward(steps: 50)
+t.currentPosition()
+t.right(by: 120)
+t.forward(steps: 15)
+t.right(by: 60)
+t.forward(steps: 50)
+t.right(by: 80)
+t.forward(steps: 13)
+t.currentPosition()
+
+//back to (x=0,y=0)
+t.currentHeading()
+t.penUp()
+t.right(by: 40)
+t.forward(steps: 55)
+t.right(by: 180)
+t.currentPosition()
+
+//2nd line from (x=25,y=50)
+t.forward(steps: 25)
+t.left(by: 90)
+t.forward(steps: 50)
+t.currentPosition()
+t.penDown()
+t.right(by: 180)
+t.forward(steps: 20)
+
 
 /*:
  ## Show the Live View
