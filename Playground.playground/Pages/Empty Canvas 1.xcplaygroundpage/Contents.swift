@@ -20,11 +20,6 @@ import CanvasGraphics
 // Create canvas
 let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 
-// Create a turtle that can draw upon the canvas
-let turtle = Tortoise(drawingUpon: canvas)
-
-// Create a pen that can draw upon the canvas
-let p = Pen(drawingUpon: canvas)
 
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
@@ -67,10 +62,13 @@ t.currentPosition()
 //set scale
 let scale = 20
 
+// High performance
+canvas.highPerformance = true
+
 ///Tessellation Start
 //CurrentPOS commands at intersecting points
 
-//First line through (x=0,y=0)
+///First line through (0, 0)
 t.currentPosition()
 t.penDown()
 t.forward(steps: 10)
@@ -91,7 +89,7 @@ t.right(by: 80)
 t.forward(steps: 13)
 t.currentPosition()
 
-//back to (x=0,y=0)
+//back to (0, 0)
 t.currentHeading()
 t.penUp()
 t.right(by: 40)
@@ -99,28 +97,51 @@ t.forward(steps: 55)
 t.right(by: 180)
 t.currentPosition()
 
-//2nd line from (x=25,y=50)
+///2nd line from (25, 50)
+//go to start
 t.forward(steps: 25)
 t.left(by: 90)
 t.forward(steps: 50)
 t.currentPosition()
 t.penDown()
-t.right(by: 180)
-t.forward(steps: 20)
+//start drawing line2
+t.right(by: 45)
+t.forward(steps: 10)
+t.currentPosition()
+t.forward(steps: 10)
+t.left(by: 135)
+t.forward(steps: 10)
+t.left(by: 135)
+t.forward(steps: 8)
+t.left(by: 45)
+t.forward(steps: 17)
+t.backward(steps: 7)
+t.currentPosition()
+t.left(by: 135)
+t.forward(steps: 8)
+t.right(by: 135)
+t.forward(steps: 10)
+t.right(by: 60)
+t.forward(steps: 70)
+t.backward(steps: 8)
+t.right(by: 55)
+t.forward(steps: 8)
+t.right(by: 125)
+t.forward(steps: 65)
+t.backward(steps: 55)
+t.left(by: 129)
+t.forward(steps: 10)
+t.left(by: 45)
+
+///3rd line from (45, 58)
+//go to 0,0
+
+//goto line3
 
 
-/*:
- ## Show the Live View
- Don't see any results?
- 
- Remember to show the Live View (1 then 2):
- 
- ![timeline](timeline.png "Timeline")
+//draw line3
 
- ## Use source control
- To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source-control.png "Source Control")
- */
+
+// High performance
+canvas.highPerformance = false
+
