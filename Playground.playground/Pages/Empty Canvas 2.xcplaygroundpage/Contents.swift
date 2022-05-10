@@ -84,6 +84,7 @@ t.forward(steps: 20)
     t.left(by: 90)
 }
 t.penUp()
+t.penUp()
 t.backward(steps: 80)
 t.penDown()
 for _ in 1...6 {
@@ -98,7 +99,7 @@ for _ in 1...6 {
     t.forward(steps: 80)
     t.right(by: 90)
 }
-
+    
 /*:
  ## Show the Live View
  Don't see any results?
