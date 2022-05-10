@@ -122,25 +122,29 @@ t.forward(steps: 8)
 t.right(by: 135)
 t.forward(steps: 10)
 t.right(by: 60)
-t.forward(steps: 70)
+t.forward(steps: 63)
 t.backward(steps: 8)
 t.right(by: 55)
 t.forward(steps: 8)
 t.right(by: 125)
-t.forward(steps: 65)
-t.backward(steps: 55)
+t.forward(steps: 57)
+t.backward(steps: 57)
 t.left(by: 129)
 t.forward(steps: 10)
+t.backward(steps: 10)
 t.left(by: 45)
-
-///3rd line from (45, 58)
+t.forward(steps: 10)
 //go to 0,0
+t.penUp()
+t.right(by: 114)
+t.forward(steps:77)
+t.right(by: 90)
+t.currentPosition()
 
-//goto line3
-
+///3rd line from (45, 50)
+//goto start line3
 
 //draw line3
-
 
 // High performance
 canvas.highPerformance = false

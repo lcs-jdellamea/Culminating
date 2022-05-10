@@ -26,6 +26,7 @@ let turtle = Tortoise(drawingUpon: canvas)
 // Create a pen that can draw upon the canvas
 let p = Pen(drawingUpon: canvas)
 
+let t = turtle
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
 
@@ -46,32 +47,57 @@ canvas.translate(to: Point(x: canvas.width / 2,
 
 // Show a grid
 canvas.drawAxes(withScale: true, by: 20, color: .black)
+canvas.highPerformance = true
+func shape() {
 
-/*:
- ## Add your code
- 
- Beginning on line 61, you can add your own code.
-  
- [Documentation](http://russellgordon.ca/CanvasGraphics/Documentation/) is available.
-
- */
-
-// Begin writing your code below (you can remove the examples shown)
-
-// Draw a circle, using the canvas object directly
-canvas.drawEllipse(at: Point(x: 100, y: 100), width: 25, height: 25)
-
-// Draw a vertical line, up and to the left
-p.drawTo(dx: -25, dy: 50)
-
-// Go back to origin
-p.goToOrigin()
-
-// Change the pen color
-p.penColor = .red
-
-// Draw a curve, down and to the right
-p.addArc(radius: 50, angle: -45)
+t.forward(steps: 20)
+t.left(by: 90)
+t.forward(steps: 20)
+t.right(by: 90)
+t.forward(steps: 20)
+t.left(by: 90)
+t.forward(steps: 20)
+t.right(by: 90)
+t.forward(steps: 20)
+t.left(by: 90)
+t.forward(steps: 20)
+t.left(by: 90)
+t.forward(steps: 20)
+t.right(by: 90)
+t.forward(steps: 20)
+t.left(by: 90)
+t.forward(steps: 20)
+t.left(by: 90)
+t.forward(steps: 20)
+t.right(by: 90)
+t.forward(steps: 20)
+t.left(by: 90)
+t.forward(steps: 20)
+t.right(by: 90)
+t.forward(steps: 20)
+t.left(by: 90)
+t.forward(steps: 20)
+t.left(by: 90)
+t.forward(steps: 20)
+t.right(by: 90)
+t.forward(steps: 20)
+    t.left(by: 90)
+}
+t.penUp()
+t.backward(steps: 80)
+t.penDown()
+for _ in 1...6 {
+    for _ in 1...8 {
+        t.penUp()
+        t.forward(steps: 80)
+        t.penDown()
+        shape()
+    }
+    t.backward(steps: 80)
+    t.left(by: 90)
+    t.forward(steps: 80)
+    t.right(by: 90)
+}
 
 /*:
  ## Show the Live View
