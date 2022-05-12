@@ -4,7 +4,7 @@
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
-let preferredWidth = 600
+let preferredWidth = 800
 let preferredHeight = 600
 /*:
  ## Required code
@@ -42,7 +42,7 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: canvas.width / 2,
+canvas.translate(to: Point(x: 100,
                            y: canvas.height / 2))
 
 // Show a grid
@@ -83,23 +83,28 @@ t.right(by: 90)
 t.forward(steps: 20)
     t.left(by: 90)
 }
-t.penUp()
-t.penUp()
-t.backward(steps: 80)
-t.penDown()
-for _ in 1...6 {
-    for _ in 1...8 {
+func row() {
+    for _ in 1...6 {
         t.penUp()
         t.forward(steps: 80)
         t.penDown()
         shape()
     }
-    t.backward(steps: 80)
-    t.left(by: 90)
-    t.forward(steps: 80)
-    t.right(by: 90)
 }
-    
+
+// Get's turtle into position
+//t.penUp()
+//t.penUp()
+//t.backward(steps: 80)
+//t.penDown()
+
+turtle.currentPosition()
+turtle.currentHeading()
+row()
+turtle.currentPosition()
+turtle.currentHeading()
+
+canvas.highPerformance = false
 /*:
  ## Show the Live View
  Don't see any results?
