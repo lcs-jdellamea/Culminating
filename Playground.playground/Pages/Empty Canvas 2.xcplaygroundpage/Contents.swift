@@ -1,6 +1,6 @@
 //: [Previous](@previous) / [Next](@next)
 /*:
-## Canvas size
+ ## Canvas size
  
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
@@ -49,40 +49,41 @@ canvas.translate(to: Point(x: 140,
 canvas.drawAxes(withScale: true, by: 20, color: .black)
 canvas.highPerformance = true
 func shape() {
-
-t.forward(steps: 20)
-t.left(by: 90)
-t.forward(steps: 20)
-t.right(by: 90)
-t.forward(steps: 20)
-t.left(by: 90)
-t.forward(steps: 20)
-t.right(by: 90)
-t.forward(steps: 20)
-t.left(by: 90)
-t.forward(steps: 20)
-t.left(by: 90)
-t.forward(steps: 20)
-t.right(by: 90)
-t.forward(steps: 20)
-t.left(by: 90)
-t.forward(steps: 20)
-t.left(by: 90)
-t.forward(steps: 20)
-t.right(by: 90)
-t.forward(steps: 20)
-t.left(by: 90)
-t.forward(steps: 20)
-t.right(by: 90)
-t.forward(steps: 20)
-t.left(by: 90)
-t.forward(steps: 20)
-t.left(by: 90)
-t.forward(steps: 20)
-t.right(by: 90)
-t.forward(steps: 20)
+    
+    t.forward(steps: 20)
+    t.left(by: 90)
+    t.forward(steps: 20)
+    t.right(by: 90)
+    t.forward(steps: 20)
+    t.left(by: 90)
+    t.forward(steps: 20)
+    t.right(by: 90)
+    t.forward(steps: 20)
+    t.left(by: 90)
+    t.forward(steps: 20)
+    t.left(by: 90)
+    t.forward(steps: 20)
+    t.right(by: 90)
+    t.forward(steps: 20)
+    t.left(by: 90)
+    t.forward(steps: 20)
+    t.left(by: 90)
+    t.forward(steps: 20)
+    t.right(by: 90)
+    t.forward(steps: 20)
+    t.left(by: 90)
+    t.forward(steps: 20)
+    t.right(by: 90)
+    t.forward(steps: 20)
+    t.left(by: 90)
+    t.forward(steps: 20)
+    t.left(by: 90)
+    t.forward(steps: 20)
+    t.right(by: 90)
+    t.forward(steps: 20)
     t.left(by: 90)
 }
+
 func row() {
     for _ in 1...4 {
         t.penUp()
@@ -92,32 +93,18 @@ func row() {
     }
 }
 
+// Columns
 for _ in 1...4 {
-t.penUp()
-t.backward(steps: 60)
-t.penDown()
-row()
-t.currentPosition()
-t.penUp()
-t.backward(steps: 420)
-t.left(by: 90)
-t.forward(steps: 80)
-t.right(by: 90)
+    t.penUp()
+    t.backward(steps: 60)
+    t.penDown()
+    row()
+    t.currentPosition()
+    t.penUp()
+    t.backward(steps: 420)
+    t.left(by: 90)
+    t.forward(steps: 80)
+    t.right(by: 90)
 }
 
 canvas.highPerformance = false
-/*:
- ## Show the Live View
- Don't see any results?
- 
- Remember to show the Live View (1 then 2):
- 
- ![timeline](timeline.png "Timeline")
-
- ## Use source control
- To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
- 
- Please commit and push your work often.
- 
- ![source_control](source-control.png "Source Control")
- */
