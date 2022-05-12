@@ -42,8 +42,8 @@ PlaygroundPage.current.liveView = canvas
  */
 
 // Move the origin from the bottom-left corner of the canvas to it's centre point
-canvas.translate(to: Point(x: 100,
-                           y: canvas.height / 2))
+canvas.translate(to: Point(x: 140,
+                           y: canvas.height / 60))
 
 // Show a grid
 canvas.drawAxes(withScale: true, by: 20, color: .black)
@@ -84,7 +84,7 @@ t.forward(steps: 20)
     t.left(by: 90)
 }
 func row() {
-    for _ in 1...6 {
+    for _ in 1...4 {
         t.penUp()
         t.forward(steps: 80)
         t.penDown()
@@ -92,17 +92,18 @@ func row() {
     }
 }
 
-// Get's turtle into position
-//t.penUp()
-//t.penUp()
-//t.backward(steps: 80)
-//t.penDown()
-
-turtle.currentPosition()
-turtle.currentHeading()
+for _ in 1...4 {
+t.penUp()
+t.backward(steps: 60)
+t.penDown()
 row()
-turtle.currentPosition()
-turtle.currentHeading()
+t.currentPosition()
+t.penUp()
+t.backward(steps: 420)
+t.left(by: 90)
+t.forward(steps: 80)
+t.right(by: 90)
+}
 
 canvas.highPerformance = false
 /*:
