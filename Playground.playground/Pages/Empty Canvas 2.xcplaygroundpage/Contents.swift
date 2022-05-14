@@ -5,7 +5,7 @@
  Set the size of your desired canvas by adjusting the constants on lines 7 and 8.
  */
 let preferredWidth = 800
-let preferredHeight = 600
+let preferredHeight = 800
 /*:
  ## Required code
  
@@ -49,7 +49,9 @@ canvas.translate(to: Point(x: 140,
 canvas.drawAxes(withScale: true, by: 20, color: .black)
 canvas.highPerformance = true
 func shape() {
-    
+    t.penUp()
+    t.forward(steps: 20)
+    t.penDown()
     t.forward(steps: 20)
     t.left(by: 90)
     t.forward(steps: 20)
@@ -82,29 +84,28 @@ func shape() {
     t.right(by: 90)
     t.forward(steps: 20)
     t.left(by: 90)
+    t.penUp()
+    t.backward(steps: 20)
 }
+
 
 func row() {
     for _ in 1...4 {
+        shape()
         t.penUp()
         t.forward(steps: 80)
-        t.penDown()
-        shape()
     }
 }
 
 // Columns
 for _ in 1...4 {
     t.penUp()
-    t.backward(steps: 60)
-    t.penDown()
     row()
-    t.currentPosition()
-    t.penUp()
-    t.backward(steps: 420)
+    t.backward(steps: 320)
     t.left(by: 90)
     t.forward(steps: 80)
     t.right(by: 90)
+    t.penDown()
 }
 
 canvas.highPerformance = false

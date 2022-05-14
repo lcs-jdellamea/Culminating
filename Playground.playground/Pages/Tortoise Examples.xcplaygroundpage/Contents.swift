@@ -29,13 +29,15 @@ let canvas = Canvas(width: preferredWidth, height: preferredHeight)
 PlaygroundPage.current.liveView = canvas
 
 /*:
-## Tortoise class
-
-To use the Tortoise abstraction, just create an instance of the Tortoise class, and provide it with a canvas object that is should draw upon.
-*/
+ ## Tortoise class
+ 
+ To use the Tortoise abstraction, just create an instance of the Tortoise class, and provide it with a canvas object that is should draw upon.
+ */
 
 // Create a turtle that will draw upon the canvas
 let turtle = Tortoise(drawingUpon: canvas)
+
+canvas.highPerformance = true
 
 // Draw a square
 turtle.penUp()
@@ -239,6 +241,7 @@ for i in 1...8 {
     turtle.left(by: 45)
     turtle.drawSelf()
 }
+canvas.highPerformance = true
 
 
 /*:
@@ -248,7 +251,7 @@ for i in 1...8 {
  Remember to show the Assistant Editor (1), and then switch to Live View (2):
  
  ![timeline](timeline.png "Timeline")
-
+ 
  ## Use source control
  To keep your work organized, receive feedback, and earn a high grade in this course, regular use of source control is a must.
  
