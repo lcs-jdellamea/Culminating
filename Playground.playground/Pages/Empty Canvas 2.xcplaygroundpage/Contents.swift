@@ -30,6 +30,12 @@ let t = turtle
 // Show the canvas in the playground's live view
 PlaygroundPage.current.liveView = canvas
 
+//change value for amount of tessellation
+var tessellationNumber = 8;
+
+//dont change this value
+var setback = tessellationNumber * 80;
+
 /*:
  ## Optional code
  
@@ -90,7 +96,7 @@ func shape() {
 
 
 func row() {
-    for _ in 1...4 {
+    for _ in 1...tessellationNumber {
         shape()
         t.penUp()
         t.forward(steps: 80)
@@ -98,10 +104,10 @@ func row() {
 }
 
 // Columns
-for _ in 1...4 {
+for _ in 1...tessellationNumber {
     t.penUp()
     row()
-    t.backward(steps: 320)
+    t.backward(steps: setback)
     t.left(by: 90)
     t.forward(steps: 80)
     t.right(by: 90)
